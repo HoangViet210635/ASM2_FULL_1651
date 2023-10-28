@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1{
+        font-size: 50px;
+      }
+      #pl_login{
+        text-decoration: none;
+        color: #33363D;
+        border: 1px black solid;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      p{
+        font-size: 17px;
+        margin-bottom: 30px;
+      }
+      #pl_login:hover{
+        background-color: #242124;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <a href="/users/login" id="pl_login">Please login</a>
+  </body>
+</html>

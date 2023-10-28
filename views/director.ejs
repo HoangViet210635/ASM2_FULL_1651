@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script>
+      var interval = 5000; // Set the interval to 5000 milliseconds (5 seconds)
+      setTimeout(function() {
+        window.location.reload();
+      }, interval);
+    </script>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;   
+      }
+      #log_out{
+        text-decoration: none;
+        color: #33363D;
+        border: 1px black solid;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      #log_out:hover{
+        background-color: #242124;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/users/refreshtime" method="post"> 
+      Update interval (in seconds): 
+      <select name="interval">
+        <option value=45 selected>45s</option> 
+        <option value=60>1 min</option> 
+        <option value=120>2 min</option> 
+        <option value=180>3 min</option> 
+      </select> 
+      <input type="submit" value="Set">
+    </form>
+    <h1><%= title %></h1>
+    <p>Welcome <%= uname %></p>
+    <%- product_cells %>
+    <p></p>
+  </body>
+  <a href="/users/logout" id="log_out"> Logout </a>
+</html>

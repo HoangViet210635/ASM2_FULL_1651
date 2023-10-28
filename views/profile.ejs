@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;   
+      }
+      #log_out{
+        text-decoration: none;
+        color: #33363D;
+        border: 1px black solid;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #log_out:hover{
+        background-color: #242124;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/users/logout" id="log_out">Log Out</a></button>
+    <h1><%= title %></h1>
+    <p>Welcome <%= uname %></p>
+    <table class="table">
+      <%- product_cell%>
+    </table>
+  </body>
+</html>
