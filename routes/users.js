@@ -79,12 +79,6 @@ router.get('/director', async function(req, res, next) {
   }
 });
 
-router.post('/director', async function(req, res, next) {
-  // Save selected shop_id into session
-  req.session.shop_id = req.body.shop_selected;
-  res.redirect('/users/director');
-});
-
 /* GET shop page */
 router.get('/profile', async function(req, res, next) {
   // check username in session
