@@ -15,7 +15,7 @@ async function product_crud(req_body, table_name) {
   if (btn == "Update"){
     let query_string = {
       text: `UPDATE "${table_name}" SET  name=$1, price=$2, amount=$3, shop_id=$4 WHERE id=$5`,
-      values: [name, price, amount, shop_id, new_id],
+      values: [name, price, amount, shop_id, id],
     }
     await client.query(query_string)
     await client.end();

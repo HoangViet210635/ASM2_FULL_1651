@@ -64,13 +64,15 @@ router.get('/admin', async function(req, res, next) {
 router.get('/director', async function(req, res, next) {
   // check username in session to make sure that user logged in.
   let user_name = req.session.username;
+  let interval = (req.session.interval)? req.session.interval*1000 : 5000;
   let table_string = await table_director('products');
   // console.log(table_string)
   if (user_name)
   {
     res.render('director', {title: "Director",
       uname: user_name, 
-      product_cells: table_string
+      product_cells: table_string,
+      interval: interval
     });
   } else {
     res.redirect('/users/login')
